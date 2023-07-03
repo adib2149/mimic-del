@@ -1,0 +1,81 @@
+<NODES>
+sex
+age
+race
+icd9codes
+sofa
+apsiii
+surgery
+pneumonia
+sepsis
+dementia
+alzheimers
+depression
+anxiety
+metacidosis
+airwayobs
+copd
+liverdisease
+heartdisease
+mechvent
+mechventcount
+druggroup
+drugcategoriesdistinctcount
+drugtimelength
+deathhosp
+deathtimeline
+losdays
+timetomechvent
+timeinmechvent
+
+<EDGES>
+sex -> age
+sex -> depression
+sex -> mechvent
+sex -> druggroup
+age -> race
+age -> surgery
+age -> dementia
+age -> alzheimers
+age -> depression
+age -> anxiety
+age -> liverdisease
+age -> heartdisease
+age -> mechvent
+age -> drugtimelength
+age -> deathtimeline
+age -> timetomechvent
+race -> mechvent
+sofa -> apsiii
+sofa -> sepsis
+sofa -> liverdisease
+apsiii -> heartdisease
+apsiii -> deathhosp
+surgery -> mechvent
+pneumonia -> sepsis
+pneumonia -> deathhosp
+pneumonia -> losdays
+pneumonia -> timeinmechvent
+sepsis -> metacidosis
+sepsis -> deathhosp
+sepsis -> timeinmechvent
+metacidosis -> timetomechvent
+airwayobs -> copd
+liverdisease -> deathhosp
+heartdisease -> losdays
+mechvent -> mechventcount
+mechvent -> druggroup
+mechvent -> timetomechvent
+mechvent -> timeinmechvent
+mechventcount -> losdays
+mechventcount -> timeinmechvent
+druggroup -> drugcategoriesdistinctcount
+druggroup -> deathhosp
+druggroup -> deathtimeline
+druggroup -> timeinmechvent
+drugcategoriesdistinctcount -> losdays
+drugcategoriesdistinctcount -> timetomechvent
+drugtimelength -> deathhosp
+drugtimelength -> deathtimeline
+deathhosp -> timetomechvent
+losdays -> timeinmechvent
